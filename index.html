@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Transcend</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon link -->
     <style>
         * {
             margin: 0;
@@ -18,12 +17,26 @@
             line-height: 1.6;
         }
         header {
-            background-color: #f05454;
-            padding: 20px;
+            background-color: #000; /* Changed to black for better contrast */
             text-align: center;
+            position: relative; /* Position relative for absolute positioning of banner */
         }
         header h1 {
             font-size: 2.5em;
+            color: #fff; /* Changed to white */
+            margin-top: 20px; /* Added some margin to space out the header */
+        }
+        header p {
+            color: #fff; /* Changed to white */
+            margin-bottom: 20px; /* Added some margin to space out the header */
+        }
+        .banner {
+            width: 100%; /* Make the banner responsive */
+            height: auto; /* Maintain aspect ratio */
+            position: absolute; /* Positioning for overlap */
+            top: 0;
+            left: 0;
+            z-index: -1; /* Place it behind the text */
         }
         nav {
             margin: 20px 0;
@@ -51,7 +64,7 @@
             text-align: center;
             font-size: 2em;
             margin-bottom: 20px;
-            color: #f05454;
+            color: #fff; /* Changed to white */
         }
         .grid {
             display: grid;
@@ -67,7 +80,7 @@
         }
         .card h3 {
             font-size: 1.5em;
-            color: #f05454;
+            color: #fff; /* Changed to white */
             margin-bottom: 15px;
         }
         .card p {
@@ -75,14 +88,14 @@
         }
         footer {
             text-align: center;
-            background-color: #f05454;
+            background-color: #000; /* Changed to black for consistency */
             padding: 20px;
             position: relative;
             bottom: 0;
             width: 100%;
         }
         footer p {
-            color: #fff;
+            color: #fff; /* Changed to white */
         }
         .btn {
             background-color: #f05454;
@@ -102,13 +115,14 @@
 <body>
 
     <header>
+        <img src="image.png" alt="TRS Banner" class="banner"> <!-- Inserted TRS Banner -->
         <h1>Team Transcend</h1>
         <p>The ultimate hub for Fortnite players and streamers.</p>
     </header>
 
     <nav>
         <a href="#custom-matches">Custom Matches</a>
-        <a href="#pr-members">150+ PR Members</a>
+        <a href="#competitive-members">Competitive Members</a> <!-- Changed to Competitive Members -->
         <a href="#coaches">Coaching</a>
         <a href="#community">Community</a>
     </nav>
@@ -129,8 +143,8 @@
             </div>
         </section>
 
-        <section id="pr-members">
-            <h2>150+ PR Members</h2>
+        <section id="competitive-members"> <!-- Changed ID to competitive-members -->
+            <h2>Competitive Members</h2>
             <div class="grid">
                 <div class="card">
                     <h3>Competitive Players</h3>
