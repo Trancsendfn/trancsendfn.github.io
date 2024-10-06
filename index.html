@@ -17,25 +17,25 @@
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #1d1f21;
-            color: #fff; /* Make all text white */
+            color: #fff;
             line-height: 1.6;
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme */
+            transition: background-color 0.3s, color 0.3s;
         }
         header {
-            background-color: #000000; /* Header background black */
+            background-color: #000000;
             padding: 20px;
             text-align: center;
         }
         header img {
             max-width: 100%;
-            height: auto; /* Make the banner responsive */
+            height: auto;
         }
         nav {
             margin: 20px 0;
             text-align: center;
         }
         nav a {
-            color: #fff; /* Nav links white */
+            color: #fff;
             padding: 10px 20px;
             text-decoration: none;
             font-size: 1.2em;
@@ -91,7 +91,7 @@
             color: #fff;
         }
         footer a {
-            color: #f05454; /* Footer links red */
+            color: #f05454;
             text-decoration: none;
         }
         footer a:hover {
@@ -123,21 +123,51 @@
             display: block;
             background-color: #f05454;
             color: #fff;
-            padding: 15px; /* Increased padding for larger button size */
-            margin: 10px;  /* Increased margin between buttons */
+            padding: 10px;
+            margin: 5px;
             border-radius: 50%;
             transition: background-color 0.3s;
-            width: 70px;  /* Set a larger width for the button */
-            height: 70px; /* Set a larger height for the button */
-            display: flex;  /* Center icon within the button */
-            justify-content: center;  /* Center horizontally */
-            align-items: center;  /* Center vertically */
+            font-size: 1.5em;
         }
         .social-icons a img {
-            width: 40px; /* Increased size of the Discord icon */
-            height: 40px;
+            width: 30px;
+            height: 30px;
         }
         .social-icons a:hover {
+            background-color: #222831;
+        }
+
+        /* Event Schedule */
+        .schedule-table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            background-color: #222831;
+        }
+        .schedule-table th, .schedule-table td {
+            border: 1px solid #fff;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+        }
+        .schedule-table th {
+            background-color: #f05454;
+        }
+
+        /* Donation Section */
+        .donation-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .donation-section .btn-donate {
+            background-color: #f05454;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .donation-section .btn-donate:hover {
             background-color: #222831;
         }
     </style>
@@ -153,6 +183,7 @@
         <a href="#Competitive-players">Competitive Players</a>
         <a href="#coaches">Coaching</a>
         <a href="#community">Community</a>
+        <a href="#schedule">Event Schedule</a>
     </nav>
 
     <div class="container">
@@ -213,23 +244,31 @@
             </div>
         </section>
 
-    </div>
-
-    <!-- Floating Social Media Icons -->
-    <div class="social-icons">
-        <!-- Discord link -->
-        <a href="https://discord.gg/ynpFKCnqUf" target="_blank">
-            <img src="https://raw.githubusercontent.com/Trancsendfn/Team-Transcend/main/discord-logo.png" alt="Discord"> <!-- Replace with actual GitHub URL -->
-        </a> 
-        <!-- TikTok link -->
-        <a href="https://www.tiktok.com/@transcendfn" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/60/TikTok_logo.svg/2560px-TikTok_logo.svg.png" alt="TikTok" style="width: 40px; height: 40px;"> <!-- TikTok icon -->
-        </a>
-    </div>
-
-    <footer>
-        <p>Team Transcend © 2024 | Level up your Fortnite experience</p>
-    </footer>
-
-</body>
-</html>
+        <!-- Event Schedule Section -->
+        <section id="schedule">
+            <h2>Event Schedule</h2>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Event</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Solo Victory Cup</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>Performance Cup</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Duo Cash Cup</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>Finals of Duo Cash Cup</td>
+                    </tr>
+                    <tr>
