@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Transcend</title>
+
+    <!-- Google Fonts (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -11,13 +15,14 @@
             box-sizing: border-box;
         }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             background-color: #1d1f21;
             color: #fff; /* Make all text white */
             line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for dark mode */
         }
         header {
-            background-color: #000000; /* Changed header background to black */
+            background-color: #000000; /* Header background black */
             padding: 20px;
             text-align: center;
         }
@@ -30,7 +35,7 @@
             text-align: center;
         }
         nav a {
-            color: #fff; /* Make nav links white */
+            color: #fff; /* Nav links white */
             padding: 10px 20px;
             text-decoration: none;
             font-size: 1.2em;
@@ -51,7 +56,7 @@
             text-align: center;
             font-size: 2em;
             margin-bottom: 20px;
-            color: #fff; /* Changed to white */
+            color: #fff;
         }
         .grid {
             display: grid;
@@ -59,7 +64,7 @@
             gap: 20px;
         }
         .card {
-            background-color: #000000; /* Keep cards black */
+            background-color: #000000;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -67,33 +72,33 @@
         }
         .card h3 {
             font-size: 1.5em;
-            color: #fff; /* Make card titles white */
+            color: #fff;
             margin-bottom: 15px;
         }
         .card p {
             font-size: 1.1em;
-            color: #fff; /* Make card text white */
+            color: #fff;
         }
         footer {
             text-align: center;
-            background-color: #000000; /* Changed footer background to black */
+            background-color: #000000;
             padding: 20px;
             position: relative;
             bottom: 0;
             width: 100%;
         }
         footer p {
-            color: #fff; /* Make footer text white */
+            color: #fff;
         }
         footer a {
-            color: #f05454; /* Make Discord link red */
+            color: #f05454; /* Discord link red */
             text-decoration: none;
         }
         footer a:hover {
             text-decoration: underline;
         }
         .btn {
-            background-color: #000000; /* Changed button background to black */
+            background-color: #000000;
             color: #fff;
             padding: 10px 20px;
             text-decoration: none;
@@ -103,7 +108,50 @@
             margin-top: 15px;
         }
         .btn:hover {
-            background-color: #222831; /* Changed hover color */
+            background-color: #222831;
+        }
+        
+        /* Floating Social Media Icons */
+        .social-icons {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+        .social-icons a {
+            display: block;
+            background-color: #f05454;
+            color: #fff;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+        .social-icons a:hover {
+            background-color: #222831;
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .dark-mode header {
+            background-color: #222831;
+        }
+
+        .dark-mode .card {
+            background-color: #333;
+        }
+
+        .dark-mode nav a {
+            color: #ddd;
+        }
+
+        .dark-mode footer {
+            background-color: #222831;
         }
     </style>
 </head>
@@ -111,6 +159,7 @@
 
     <header>
         <img src="https://raw.githubusercontent.com/Trancsendfn/Team-Transcend/refs/heads/main/5FD0C504-198C-4F84-A69D-D367F8443069.png" alt="TRS Banner" style="width: 100%; height: auto;">
+        <button onclick="toggleDarkMode()" class="btn">Toggle Dark Mode</button> <!-- Dark mode toggle button -->
     </header>
 
     <nav>
@@ -180,11 +229,25 @@
 
     </div>
 
+    <!-- Floating Social Media Icons -->
+    <div class="social-icons">
+        <a href="https://discord.gg/ynpFKCnqUf" target="_blank"><i class="fab fa-discord"></i></a>
+    </div>
+
     <footer>
         <p>Team Transcend © 2024 | Level up your Fortnite experience</p>
         <p>Join us on Discord: <a href="https://discord.gg/ynpFKCnqUf" target="_blank">https://discord.gg/ynpFKCnqUf</a></p>
     </footer>
 
+    <script>
+        // Dark Mode Toggle Function
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+    <!-- FontAwesome for social icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
-
