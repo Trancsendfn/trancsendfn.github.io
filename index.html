@@ -19,7 +19,7 @@
             background-color: #1d1f21;
             color: #fff; /* Make all text white */
             line-height: 1.6;
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition for dark mode */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme */
         }
         header {
             background-color: #000000; /* Header background black */
@@ -91,7 +91,7 @@
             color: #fff;
         }
         footer a {
-            color: #f05454; /* Discord link red */
+            color: #f05454; /* Footer links red */
             text-decoration: none;
         }
         footer a:hover {
@@ -110,7 +110,7 @@
         .btn:hover {
             background-color: #222831;
         }
-        
+
         /* Floating Social Media Icons */
         .social-icons {
             position: fixed;
@@ -131,35 +131,12 @@
         .social-icons a:hover {
             background-color: #222831;
         }
-
-        /* Dark Mode Styles */
-        .dark-mode {
-            background-color: #000;
-            color: #fff;
-        }
-
-        .dark-mode header {
-            background-color: #222831;
-        }
-
-        .dark-mode .card {
-            background-color: #333;
-        }
-
-        .dark-mode nav a {
-            color: #ddd;
-        }
-
-        .dark-mode footer {
-            background-color: #222831;
-        }
     </style>
 </head>
 <body>
 
     <header>
         <img src="https://raw.githubusercontent.com/Trancsendfn/Team-Transcend/refs/heads/main/5FD0C504-198C-4F84-A69D-D367F8443069.png" alt="TRS Banner" style="width: 100%; height: auto;">
-        <button onclick="toggleDarkMode()" class="btn">Toggle Dark Mode</button> <!-- Dark mode toggle button -->
     </header>
 
     <nav>
@@ -232,19 +209,12 @@
     <!-- Floating Social Media Icons -->
     <div class="social-icons">
         <a href="https://discord.gg/ynpFKCnqUf" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="https://www.tiktok.com/@your-tiktok-handle" target="_blank"><i class="fab fa-tiktok"></i></a> <!-- TikTok link -->
     </div>
 
     <footer>
         <p>Team Transcend © 2024 | Level up your Fortnite experience</p>
-        <p>Join us on Discord: <a href="https://discord.gg/ynpFKCnqUf" target="_blank">https://discord.gg/ynpFKCnqUf</a></p>
     </footer>
-
-    <script>
-        // Dark Mode Toggle Function
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-        }
-    </script>
 
     <!-- FontAwesome for social icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
