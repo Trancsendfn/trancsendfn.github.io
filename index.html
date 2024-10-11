@@ -5,49 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Transcend</title>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts (Poppins) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #1d1f21;
-            color: white;
-            margin: 0;
-            padding: 0;
+            color: #fff;
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
         }
-
         header {
+            background-color: #000000;
+            padding: 20px;
             text-align: center;
-            padding: 20px;
-            background-color: #000;
         }
-
-        header h1 {
-            color: #f05454;
+        header img {
+            max-width: 100%;
+            height: auto;
         }
-
-        .stats-container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        nav a:hover {
             background-color: #222831;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            margin: 40px 0;
+        }
+        section h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: #000000;
+            padding: 20px;
             border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
         }
-
-        .player-stats {
-            padding: 15px;
-            border-bottom: 1px solid #393e46;
+        .card h3 {
+            font-size: 1.5em;
+            color: #fff;
+            margin-bottom: 15px;
         }
-
-        .player-stats h2 {
+        .card p {
+            font-size: 1.1em;
+            color: #fff;
+        }
+        footer {
+            text-align: center;
+            background-color: #000000;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            color: #fff;
+        }
+        footer a {
             color: #f05454;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1em;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .btn:hover {
+            background-color: #222831;
         }
 
-        .player-stats p {
-            margin: 5px 0;
-        }
-
+        /* Floating Social Media Icons */
         .social-icons {
             position: fixed;
             top: 50%;
@@ -55,7 +119,6 @@
             transform: translateY(-50%);
             z-index: 1000;
         }
-
         .social-icons a {
             display: block;
             background-color: #f05454;
@@ -65,15 +128,46 @@
             border-radius: 50%;
             transition: background-color 0.3s;
             font-size: 1.5em;
-            text-align: center;
         }
-
         .social-icons a img {
             width: 30px;
             height: 30px;
         }
-
         .social-icons a:hover {
+            background-color: #222831;
+        }
+
+        /* Event Schedule */
+        .schedule-table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            background-color: #222831;
+        }
+        .schedule-table th, .schedule-table td {
+            border: 1px solid #fff;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+        }
+        .schedule-table th {
+            background-color: #f05454;
+        }
+
+        /* Donation Section */
+        .donation-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .donation-section .btn-donate {
+            background-color: #f05454;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .donation-section .btn-donate:hover {
             background-color: #222831;
         }
     </style>
@@ -81,38 +175,134 @@
 <body>
 
     <header>
-        <h1>Team Transcend</h1>
+        <img src="https://raw.githubusercontent.com/Trancsendfn/Team-Transcend/refs/heads/main/5FD0C504-198C-4F84-A69D-D367F8443069.png" alt="TRS Banner" style="width: 100%; height: auto;">
     </header>
 
-    <div class="stats-container" id="stats-container">
-        <h2>Weekly Event Schedule</h2>
-        <div class="player-stats">
-            <p><strong>Monday:</strong> Solo Victory Cup</p>
-            <p><strong>Tuesday:</strong> Performance Cup</p>
-            <p><strong>Wednesday:</strong> Duo Cash Cup</p>
-            <p><strong>Thursday:</strong> Final of Duo Cash Cup</p>
-            <p><strong>Friday:</strong> Reload Duo Cash Cup</p>
-            <p><strong>Saturday:</strong> Ranked Cup</p>
-            <p><strong>Sunday:</strong> Squad Victory Cup</p>
-        </div>
+    <nav>
+        <a href="#custom-matches">Custom Matches</a>
+        <a href="#Competitive-players">Competitive Players</a>
+        <a href="#coaches">Coaching</a>
+        <a href="#community">Community</a>
+        <a href="#schedule">Event Schedule</a>
+    </nav>
 
-        <h2>Support Us</h2>
-        <div class="player-stats">
-            <p>If you enjoy what we do, consider donating to help us improve!</p>
-            <a href="YOUR_DONATE_LINK_HERE" class="btn">Donate</a> <!-- Replace with your actual donation link -->
-        </div>
+    <div class="container">
+
+        <section id="custom-matches">
+            <h2>Custom Creative Matches & Battle Royale</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Creative Matches</h3>
+                    <p>Join custom creative lobbies where you can practice your builds and strategies with other competitive players.</p>
+                </div>
+                <div class="card">
+                    <h3>Battle Royale Matches</h3>
+                    <p>Hop into high-stakes custom Battle Royale games and show your skills against top-tier competition.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="Competitive-players">
+            <h2>Competitive Players</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Competitive Players</h3>
+                    <p>Our community is filled with members who all have 150+ PR. Play with and against top players to sharpen your skills.</p>
+                </div>
+                <div class="card">
+                    <h3>Push Yourself</h></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="coaches">
+            <h2>Coaching Services</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Personalized Training</h3>
+                    <p>Our expert coaches will work with you to refine your strategies, improve your building, and take your game to the next level.</p>
+                </div>
+                <div class="card">
+                    <h3>One-on-One Coaching</h3>
+                    <p>Get one-on-one guidance tailored to your playstyle and goals. Whether you're trying to improve your mechanics or game sense, we’ve got you covered.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="community">
+            <h2>Fortnite Dedicated Players & Streamers</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Community Support</h3>
+                    <p>Join a community of passionate Fortnite players and streamers. Share tips, grow your following, and support each other on the grind.</p>
+                </div>
+                <div class="card">
+                    <h3>Grind Together</h3>
+                    <p>We’re all about grinding, improving, and having fun. Whether you’re a player or a streamer, you’ll find a supportive group here.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Schedule Section -->
+        <section id="schedule">
+            <h2>Event Schedule</h2>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Event</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Solo Victory Cup</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>Performance Cup</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Duo Cash Cup</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>Finals of Duo Cash Cup</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Reload Duo Cash Cup</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>Ranked Cup</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>Squad Victory Cup</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Donation Section -->
+        <section class="donation-section">
+            <h2>Support Us</h2>
+            <a href="#" class="btn-donate">Donate</a>
+        </section>
+
     </div>
+
+    <footer>
+        <p>&copy; 2024 Team Transcend. All Rights Reserved.</p>
+        <p>Follow us on <a href="https://www.tiktok.com/@transcendfn" target="_blank">TikTok</a> and <a href="https://discord.gg/ynpFKCnqUf" target="_blank">Discord</a></p>
+    </footer>
 
     <!-- Floating Social Media Icons -->
     <div class="social-icons">
-        <!-- Discord Link -->
-        <a href="https://discord.gg/ynpFKCnqUf" target="_blank">
-            <img src="https://raw.githubusercontent.com/YourGitHubUsername/YourRepoName/main/images/discord-logo.png" alt="Discord">
-        </a> 
-        <!-- TikTok Link -->
-        <a href="https://www.tiktok.com/@transcendfn" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/en/6/69/TikTok_logo.svg" alt="TikTok">
-        </a>
+        <a href="https://www.tiktok.com/@transcendfn" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Tiktok_icon.svg/512px-Tiktok_icon.svg.png" alt="TikTok"></a>
+        <a href="https://discord.gg/ynpFKCnqUf" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Discord_logo.svg/512px-Discord_logo.svg.png" alt="Discord"></a>
     </div>
 
 </body>
