@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #1d1f21;
@@ -21,48 +23,58 @@
             line-height: 1.6;
             transition: background-color 0.3s, color 0.3s;
         }
+
         header {
             background-color: #000000;
             padding: 20px;
             text-align: center;
         }
+
         header img {
             max-width: 100%;
             height: auto;
         }
+
         nav {
             margin: 20px 0;
             text-align: center;
         }
+
         nav a {
             color: #fff;
             padding: 10px 20px;
             text-decoration: none;
             font-size: 1.2em;
         }
+
         nav a:hover {
             background-color: #222831;
             border-radius: 5px;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
+
         section {
             margin: 40px 0;
         }
+
         section h2 {
             text-align: center;
             font-size: 2em;
             margin-bottom: 20px;
             color: #fff;
         }
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
+
         .card {
             background-color: #000000;
             padding: 20px;
@@ -70,15 +82,18 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             text-align: center;
         }
+
         .card h3 {
             font-size: 1.5em;
             color: #fff;
             margin-bottom: 15px;
         }
+
         .card p {
             font-size: 1.1em;
             color: #fff;
         }
+
         footer {
             text-align: center;
             background-color: #000000;
@@ -87,16 +102,20 @@
             bottom: 0;
             width: 100%;
         }
+
         footer p {
             color: #fff;
         }
+
         footer a {
             color: #f05454;
             text-decoration: none;
         }
+
         footer a:hover {
             text-decoration: underline;
         }
+
         .btn {
             background-color: #000000;
             color: #fff;
@@ -107,6 +126,7 @@
             display: inline-block;
             margin-top: 15px;
         }
+
         .btn:hover {
             background-color: #222831;
         }
@@ -119,6 +139,7 @@
             transform: translateY(-50%);
             z-index: 1000;
         }
+
         .social-icons a {
             display: block;
             background-color: #f05454;
@@ -129,10 +150,12 @@
             transition: background-color 0.3s;
             font-size: 1.5em;
         }
+
         .social-icons a img {
             width: 30px;
             height: 30px;
         }
+
         .social-icons a:hover {
             background-color: #222831;
         }
@@ -144,12 +167,15 @@
             border-collapse: collapse;
             background-color: #222831;
         }
-        .schedule-table th, .schedule-table td {
+
+        .schedule-table th,
+        .schedule-table td {
             border: 1px solid #fff;
             padding: 15px;
             text-align: center;
             color: #fff;
         }
+
         .schedule-table th {
             background-color: #f05454;
         }
@@ -159,6 +185,7 @@
             text-align: center;
             margin: 40px 0;
         }
+
         .donation-section .btn-donate {
             background-color: #f05454;
             color: #fff;
@@ -167,15 +194,39 @@
             border-radius: 5px;
             text-decoration: none;
         }
+
         .donation-section .btn-donate:hover {
             background-color: #222831;
         }
+
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #121212;
+            color: #f5f5f5;
+        }
+
+        .dark-mode header,
+        .dark-mode footer,
+        .dark-mode .card {
+            background-color: #222831;
+        }
+
+        .dark-mode nav a {
+            color: #f5f5f5;
+        }
+
+        .dark-mode .btn {
+            background-color: #333;
+            color: #f5f5f5;
+        }
     </style>
 </head>
+
 <body>
 
     <header>
-        <img src="https://raw.githubusercontent.com/Trancsendfn/Team-Transcend/refs/heads/main/5FD0C504-198C-4F84-A69D-D367F8443069.png" alt="TRS Banner" style="width: 100%; height: auto;">
+        <img src="https://raw.githubusercontent.com/Trancsendfn/Team-Transcend/refs/heads/main/5FD0C504-198C-4F84-A69D-D367F8443069.png" alt="TRS Banner"
+            style="width: 100%; height: auto;">
     </header>
 
     <nav>
@@ -184,6 +235,10 @@
         <a href="#coaches">Coaching</a>
         <a href="#community">Community</a>
         <a href="#schedule">Event Schedule</a>
+        <a href="#team">Meet the Team</a>
+        <a href="#news">News</a>
+        <a href="#merch">Merchandise</a>
+        <a href="#faq">FAQ</a>
     </nav>
 
     <div class="container">
@@ -210,7 +265,8 @@
                     <p>Our community is filled with members who all have 150+ PR. Play with and against top players to sharpen your skills.</p>
                 </div>
                 <div class="card">
-                    <h3>Push Yourself</h></p>
+                    <h3>Push Yourself</h3>
+                    <p>Surround yourself with driven players who will push you to improve and be the best you can be.</p>
                 </div>
             </div>
         </section>
@@ -249,61 +305,141 @@
             <table class="schedule-table">
                 <thead>
                     <tr>
-                        <th>Day</th>
                         <th>Event</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Details</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Monday</td>
+                        <td>Custom Creative Scrims</td>
+                        <td>October 15, 2024</td>
+                        <td>4:00 PM EST</td>
+                        <td>Join custom lobbies for creative mode practice and fun matches.</td>
+                    </tr>
+                    <tr>
                         <td>Solo Victory Cup</td>
-                    </tr>
-                    <tr>
-                        <td>Tuesday</td>
-                        <td>Performance Cup</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>Duo Cash Cup</td>
-                    </tr>
-                    <tr>
-                        <td>Thursday</td>
-                        <td>Finals of Duo Cash Cup</td>
-                    </tr>
-                    <tr>
-                        <td>Friday</td>
-                        <td>Reload Duo Cash Cup</td>
-                    </tr>
-                    <tr>
-                        <td>Saturday</td>
-                        <td>Ranked Cup</td>
-                    </tr>
-                    <tr>
-                        <td>Sunday</td>
-                        <td>Squad Victory Cup</td>
+                        <td>October 20, 2024</td>
+                        <td>2:00 PM EST</td>
+                        <td>Competitive Solo Battle Royale Cup. Fight for the top spot.</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <!-- Donation Section -->
-        <section class="donation-section">
-            <h2>Support Us</h2>
-            <a href="#" class="btn-donate">Donate</a>
+        <!-- Team Section (Updated) -->
+        <section id="team">
+            <h2>Meet the Team</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Player: TRS_Ninja</h3>
+                    <p>150+ PR | Regular Solo Victory Cup Qualifier</p>
+                    <p>Streaming on: <a href="https://www.tiktok.com/@trs_ninja" target="_blank">TikTok</a></p>
+                    <p>Achievements: 3x Top 10 Solo Vic Cup Finalist, 5x Cash Cup Qualifier</p>
+                </div>
+                <div class="card">
+                    <h3>Player: TRS_Slayer</h3>
+                    <p>200+ PR | Duo Cash Cup Finalist</p>
+                    <p>Follow on: <a href="https://twitter.com/trs_slayer" target="_blank">Twitter</a> | <a href="https://twitch.tv/trs_slayer" target="_blank">Twitch</a></p>
+                    <p>Achievements: 4x Duo Cash Cup Finalist, 6x Top 5 in Ranked Events</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news">
+            <h2>Latest News</h2>
+            <article>
+                <h3>Player TRS_Ninja Qualifies for Solo Victory Cup</h3>
+                <p>Once again, TRS_Ninja proves his worth by qualifying for the Solo Victory Cup. Join him on <a href="https://www.tiktok.com/@trs_ninja"
+                        target="_blank">TikTok</a> to catch his live streams and follow the journey.</p>
+            </article>
+            <article>
+                <h3>Merch Store Coming Soon!</h3>
+                <p>We are excited to announce that the official Team Transcend merchandise store is in the works! Stay tuned for updates and exclusive deals for
+                    early buyers.</p>
+            </article>
+        </section>
+
+        <!-- Merchandise Section -->
+        <section id="merch">
+            <h2>Team Merch - Coming Soon!</h2>
+            <p>Our official Team Transcend merchandise is coming soon! Stay tuned for the drop, and get your exclusive team gear.</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>Official TRS T-Shirt</h3>
+                    <p>Price: $25</p>
+                </div>
+                <div class="card">
+                    <h3>Official TRS Hoodie</h3>
+                    <p>Price: $50</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="card">
+                <h3>How can I join Team Transcend?</h3>
+                <p>To join, visit our <a href="https://discord.gg/ynpFKCnqUf" target="_blank">Discord server</a> and complete the application process. We review
+                    applications and host tryouts for competitive players.</p>
+            </div>
+            <div class="card">
+                <h3>What are the requirements to join?</h3>
+                <p>We are looking for players with at least 150+ PR who are committed to improving and competing at a high level.</p>
+            </div>
+            <div class="card">
+                <h3>Can I get coaching?</h3>
+                <p>Yes! We offer one-on-one coaching services for players looking to improve their mechanics, game sense, or tournament performance. Visit the
+                    Coaching section for more details.</p>
+            </div>
         </section>
 
     </div>
 
     <footer>
-        <p>&copy; 2024 Team Transcend. All Rights Reserved.</p>
-        <p>Follow us on <a href="https://www.tiktok.com/@transcendfn" target="_blank">TikTok</a> and <a href="https://discord.gg/ynpFKCnqUf" target="_blank">Discord</a></p>
+        <p>Copyright &copy; 2024 Team Transcend. All Rights Reserved.</p>
+        <p><a href="https://www.tiktok.com/@transcendfn" target="_blank">Follow us on TikTok</a></p>
     </footer>
 
-    <!-- Floating Social Media Icons -->
+    <!-- Social Media Floating Icons -->
     <div class="social-icons">
-        <a href="https://www.tiktok.com/@transcendfn" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Tiktok_icon.svg/512px-Tiktok_icon.svg.png" alt="TikTok"></a>
-        <a href="https://discord.gg/ynpFKCnqUf" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Discord_logo.svg/512px-Discord_logo.svg.png" alt="Discord"></a>
+        <a href="https://discord.gg/ynpFKCnqUf" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png"
+                alt="Discord" /></a>
+        <a href="https://www.tiktok.com/@transcendfn" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046127.png"
+                alt="TikTok" /></a>
     </div>
 
+    <!-- Dark Mode Toggle -->
+    <div style="text-align: center; padding: 20px;">
+        <button id="dark-mode-toggle" class="btn">Toggle Dark Mode</button>
+    </div>
+
+    <!-- JavaScript for Dark Mode -->
+    <script>
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+
+        // Check for saved mode in localStorage
+        const savedMode = localStorage.getItem('theme');
+        if (savedMode) {
+            body.classList.add(savedMode);
+        }
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            // Save mode in localStorage
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark-mode');
+            } else {
+                localStorage.removeItem('theme');
+            }
+        });
+    </script>
+
 </body>
+
 </html>
