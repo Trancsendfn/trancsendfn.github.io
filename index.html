@@ -4,16 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Transcend</title>
-
-    <!-- Google Fonts (Poppins) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #1d1f21;
@@ -83,7 +74,6 @@
             text-align: center;
             background-color: #000000;
             padding: 20px;
-            position: relative;
             bottom: 0;
             width: 100%;
         }
@@ -100,47 +90,18 @@
         .btn {
             background-color: #000000;
             color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 1em;
+            padding: 10px 15px;
+            border: none;
             border-radius: 5px;
+            cursor: pointer;
             display: inline-block;
             margin-top: 15px;
         }
         .btn:hover {
             background-color: #222831;
         }
-
-        /* Floating Social Media Icons */
-        .social-icons {
-            position: fixed;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            z-index: 1000;
-        }
-        .social-icons a {
-            display: block;
-            background-color: #f05454;
-            color: #fff;
-            padding: 10px;
-            margin: 5px;
-            border-radius: 50%;
-            transition: background-color 0.3s;
-            font-size: 1.5em;
-        }
-        .social-icons a img {
-            width: 30px;
-            height: 30px;
-        }
-        .social-icons a:hover {
-            background-color: #222831;
-        }
-
-        /* Event Schedule */
         .schedule-table {
             width: 100%;
-            margin: 20px 0;
             border-collapse: collapse;
             background-color: #222831;
         }
@@ -153,264 +114,262 @@
         .schedule-table th {
             background-color: #f05454;
         }
-
-        /* Donation Section */
-        .donation-section {
-            text-align: center;
-            margin: 40px 0;
-        }
         .donation-section .btn-donate {
             background-color: #f05454;
             color: #fff;
-            padding: 15px 30px;
-            font-size: 1.2em;
+            padding: 10px 15px;
             border-radius: 5px;
             text-decoration: none;
         }
         .donation-section .btn-donate:hover {
             background-color: #222831;
         }
-
-        /* Player Profile Section */
-        .profile-section {
-            margin: 40px 0;
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #121212;
+            color: #f5f5f5;
         }
-        .profile {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .profile img {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-        }
-        .profile h3 {
-            margin-top: 10px;
-            color: #fff;
-        }
-
-        /* Recent News/Announcements Section */
-        .news-section {
-            margin: 40px 0;
-        }
-        .news-item {
+        .dark-mode header,
+        .dark-mode footer,
+        .dark-mode .card {
             background-color: #222831;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 10px 0;
         }
-        .news-item h4 {
-            margin-bottom: 5px;
+        .dark-mode nav a {
+            color: #f5f5f5;
         }
-
-        /* FAQ Section */
-        .faq-section {
-            margin: 40px 0;
+        .dark-mode .btn {
+            background-color: #333;
+            color: #f5f5f5;
         }
-        .faq-item {
+        .social-icons a {
+            display: block;
+            background-color: #f05454;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 10px;
+            transition: background-color 0.3s;
+            font-size: 1.5em;
+        }
+        .social-icons a img {
+            width: 30px;
+            height: 30px;
+        }
+        .social-icons a:hover {
             background-color: #222831;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 10px 0;
-        }
-        .faq-item h4 {
-            margin-bottom: 5px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="https://raw.githubusercontent.com/Trancsendfn/Team-Transcend/refs/heads/main/5FD0C504-198C-4F84-A69D-D367F8443069.png" alt="TRS Banner" style="width: 100%; height: auto;">
-    </header>
+<header>
+    <img src="https://raw.githubusercontent.com/Trancsendfn/Team-Transcend/refs/heads/main/5FD0C504-198C-4F84-A69D-D367F8443069.png" alt="TRS Banner">
+</header>
 
-    <nav>
-        <a href="#custom-matches">Custom Matches</a>
-        <a href="#competitive-players">Competitive Players</a>
-        <a href="#coaches">Coaching</a>
-        <a href="#community">Community</a>
-        <a href="#schedule">Event Schedule</a>
-        <a href="#player-profile">Player Profile</a>
-        <a href="#recent-news">Recent News</a>
-        <a href="#faq">FAQ</a>
-    </nav>
+<nav>
+    <a href="#coaches">Coaching</a>
+    <a href="#community">Community</a>
+    <a href="#schedule">Event Schedule</a>
+    <a href="#team">Meet the Team</a>
+    <a href="#news">News</a>
+    <a href="#merch">Merchandise</a>
+    <a href="#faq">FAQ</a>
+</nav>
 
-    <div class="container">
-
-        <section id="custom-matches">
-            <h2>Custom Creative Matches & Battle Royale</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Creative Matches</h3>
-                    <p>Join custom creative lobbies where you can practice your builds and strategies with other competitive players.</p>
-                </div>
-                <div class="card">
-                    <h3>Battle Royale Matches</h3>
-                    <p>Hop into high-stakes custom Battle Royale games and show your skills against top-tier competition.</p>
-                </div>
+<div class="container">
+    <section id="community">
+        <h2>Community Engagement</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Competitive Players</h3>
+                <p>Our community is filled with members who all have 150+ PR. Play with and against top players to sharpen your skills.</p>
             </div>
-        </section>
-
-        <section id="competitive-players">
-            <h2>Competitive Players</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Competitive Players</h3>
-                    <p>Our community is filled with members who all have 150+ PR. Play with and against top players to sharpen your skills.</p>
-                </div>
-                <div class="card">
-                    <h3>Push Yourself</h3>
-                    <p>Surround yourself with driven players who will push you to improve and be the best you can be.</p>
-                </div>
+            <div class="card">
+                <h3>Push Yourself</h3>
+                <p>Surround yourself with driven players who will push you to improve and be the best you can be.</p>
             </div>
-        </section>
-
-        <section id="coaches">
-            <h2>Coaching Services</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Personalized Training</h3>
-                    <p>Our expert coaches will work with you to refine your strategies, improve your building, and take your game to the next level.</p>
-                </div>
-                <div class="card">
-                    <h3>One-on-One Coaching</h3>
-                    <p>Get one-on-one guidance tailored to your playstyle and goals. Whether you're trying to improve your mechanics or game sense, we’ve got you covered.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="community">
-            <h2>Fortnite Dedicated Players & Streamers</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Community Engagement</h3>
-                    <p>Join our Discord to connect with other Fortnite players and streamers. Share tips, strategies, and build friendships.</p>
-                </div>
-                <div class="card">
-                    <h3>Stream Highlights</h3>
-                    <p>Check out our team members' streams on TikTok and YouTube for the latest gameplay highlights and tips.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="schedule">
-            <h2>Event Schedule</h2>
-            <table class="schedule-table">
-                <thead>
-                    <tr>
-                        <th>Event</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Solo Victory Cup</td>
-                        <td>Compete for victory in the Solo Victory Cup each week.</td>
-                    </tr>
-                    <tr>
-                        <td>Performance Cup</td>
-                        <td>Showcase your skills and compete for performance points weekly.</td>
-                    </tr>
-                    <tr>
-                        <td>Duo Cash Cup</td>
-                        <td>Team up with a partner and battle it out in the Duo Cash Cup.</td>
-                    </tr>
-                    <tr>
-                        <td>Duo CC Final</td>
-                        <td>Top duos compete in the finals for cash prizes.</td>
-                    </tr>
-                    <tr>
-                        <td>Reload Cup</td>
-                        <td>A fast-paced competition with unique rules.</td>
-                    </tr>
-                    <tr>
-                        <td>Trio Cash Cup</td>
-                        <td>Gather your squad and enter the Trio Cash Cup.</td>
-                    </tr>
-                    <tr>
-                        <td>Squad Victory Cup</td>
-                        <td>Join forces with your team in the Squad Victory Cup.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section id="player-profile">
-            <h2>Player Profile</h2>
-            <div class="profile-section">
-                <div class="profile">
-                    <img src="https://via.placeholder.com/100" alt="TRS Gronk">
-                    <h3>TRS Gronk</h3>
-                    <p>Solo Victory Cup qualifier. Only streams on TikTok.</p>
-                </div>
-                <div class="profile">
-                    <img src="https://via.placeholder.com/100" alt="TRS Vadios">
-                    <h3>TRS Vadios</h3>
-                    <p>Duo CC Finalist.</p>
-                </div>
-                <div class="profile">
-                    <img src="https://via.placeholder.com/100" alt="TRS Aluskiman">
-                    <h3>TRS Aluskimanツ</h3>
-                    <p>Duo CC Finalist.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="recent-news">
-            <h2>Recent News/Announcements</h2>
-            <div class="news-section">
-                <div class="news-item">
-                    <h4>Team Tournament Updates</h4>
-                    <p>Check back regularly for updates on upcoming tournaments and team performance.</p>
-                </div>
-                <div class="news-item">
-                    <h4>New Coaching Sessions Available</h4>
-                    <p>Sign up for personalized coaching sessions starting next week!</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq">
-            <h2>FAQ</h2>
-            <div class="faq-section">
-                <div class="faq-item">
-                    <h4>How can I join Team Transcend?</h4>
-                    <p>We are always looking for dedicated players. Reach out to us through our Discord.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>What tournaments do you participate in?</h4>
-                    <p>We participate in various Fortnite tournaments including cash cups, creative matches, and more.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>How can I improve my skills?</h4>
-                    <p>Join our coaching sessions and engage with other players in our community to share tips and strategies.</p>
-                </div>
-            </div>
-        </section>
-
-        <div class="donation-section">
-            <h2>Support Us!</h2>
-            <p>Your support helps us grow our community and improve our services.</p>
-            <a href="#" class="btn-donate">Donate</a>
         </div>
+    </section>
 
-    </div>
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Solo Victory Cup</td>
+                    <td>October 14, 2024</td>
+                    <td>4:00 PM EST</td>
+                    <td>Competitive Solo Battle Royale Cup. Fight for the top spot.</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Performance Cup</td>
+                    <td>October 15, 2024</td>
+                    <td>4:00 PM EST</td>
+                    <td>Showcase your skills and compete for performance points.</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Duo Cash Cup</td>
+                    <td>October 16, 2024</td>
+                    <td>4:00 PM EST</td>
+                    <td>Team up with a partner for a competitive duo challenge.</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Finals of Duo Cash Cup</td>
+                    <td>October 17, 2024</td>
+                    <td>4:00 PM EST</td>
+                    <td>Top duos compete for cash prizes.</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Reload Duo Cash Cup</td>
+                    <td>October 18, 2024</td>
+                    <td>4:00 PM EST</td>
+                    <td>A fast-paced competition with unique rules.</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Ranked Cup</td>
+                    <td>October 19, 2024</td>
+                    <td>4:00 PM EST</td>
+                    <td>Compete in a high-stakes ranked event.</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>Squad Victory Cup</td>
+                    <td>October 20, 2024</td>
+                    <td>2:00 PM EST</td>
+                    <td>Join forces with your team in the Squad Victory Cup.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 Team Transcend | <a href="#">Privacy Policy</a></p>
-    </footer>
+    <!-- Donation Section -->
+    <section class="donation-section">
+        <h2>Support Us</h2>
+        <a href="#" class="btn-donate">Donate</a>
+    </section>
 
-    <!-- Social Media Icons -->
+    <!-- Team Section -->
+    <section id="team">
+        <h2>Meet the Team</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Player: TRS_Ninja</h3>
+                <p>150+ PR | Regular Solo Victory Cup Qualifier | Expert in Battle Royale Strategies</p>
+            </div>
+            <div class="card">
+                <h3>Player: TRS_Scorcher</h3>
+                <p>160+ PR | Duo Champion | Known for Aggressive Plays</p>
+            </div>
+            <div class="card">
+                <h3>Player: TRS_Thunder</h3>
+                <p>155+ PR | Squad Specialist | Tactical Team Player</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news">
+        <h2>Latest News</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>New Merchandise Launch!</h3>
+                <p>Check out our latest gear available for purchase.</p>
+            </div>
+            <div class="card">
+                <h3>Upcoming Charity Event</h3>
+                <p>Join us for a charity event to support local youth programs.</p>
+            </div>
+            <div class="card">
+                <h3>Player Spotlights</h3>
+                <p>Congratulations to TRS_Scorcher for winning the last event!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merchandise Section -->
+    <section id="merch">
+        <h2>Merchandise</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>T-Shirts</h3>
+                <p>Stylish T-shirts available in various sizes.</p>
+                <button class="btn">Buy Now</button>
+            </div>
+            <div class="card">
+                <h3>Hoodies</h3>
+                <p>Stay warm with our cozy hoodies!</p>
+                <button class="btn">Buy Now</button>
+            </div>
+            <div class="card">
+                <h3>Stickers</h3>
+                <p>Show off your team spirit with our stickers!</p>
+                <button class="btn">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <h2>FAQ</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>How do I join?</h3>
+                <p>Fill out our registration form and join our Discord.</p>
+            </div>
+            <div class="card">
+                <h3>What is the age requirement?</h3>
+                <p>All ages are welcome, but players must be 13+ to compete.</p>
+            </div>
+            <div class="card">
+                <h3>Where can I find events?</h3>
+                <p>Events are listed in the schedule above.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
     <div class="social-icons">
-        <a href="https://discord.gg/ynpFKCnqUf" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/discord-logo.png" alt="Discord">
-        </a>
-        <a href="https://www.tiktok.com/@transcendfn" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/tiktok.png" alt="TikTok">
-        </a>
+        <a href="#" title="Facebook"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"/></a>
+        <a href="#" title="Twitter"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png"/></a>
+        <a href="#" title="Instagram"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"/></a>
+        <a href="#" title="Discord"><img src="https://img.icons8.com/ios-filled/50/ffffff/discord.png"/></a>
     </div>
+    <p>© 2024 Team Transcend. All rights reserved.</p>
+</footer>
+
+<script>
+    const btn = document.createElement('button');
+    btn.innerText = 'Toggle Dark Mode';
+    btn.style.position = 'fixed';
+    btn.style.bottom = '20px';
+    btn.style.right = '20px';
+    btn.style.padding = '10px';
+    btn.style.backgroundColor = '#f05454';
+    btn.style.color = '#fff';
+    btn.style.border = 'none';
+    btn.style.borderRadius = '5px';
+    btn.style.cursor = 'pointer';
+    document.body.appendChild(btn);
+
+    btn.onclick = () => {
+        document.body.classList.toggle('dark-mode');
+    };
+</script>
 
 </body>
 </html>
