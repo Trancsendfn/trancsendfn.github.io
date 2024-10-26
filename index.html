@@ -1,1 +1,293 @@
-TRS WEBSITE IS GETTING WORKED ON CURRENTLY 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Transcend</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1d1f21;
+            color: #fff;
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            background-color: #222831;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            margin: 40px 0;
+        }
+        section h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .card h3 {
+            font-size: 1.5em;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .card p {
+            font-size: 1.1em;
+            color: #fff;
+        }
+        footer {
+            text-align: center;
+            background-color: #000000;
+            padding: 20px;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            color: #fff;
+        }
+        footer a {
+            color: #e0e0e0; /* Changed to a dark color */
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .btn:hover {
+            background-color: #222831;
+        }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #222831;
+        }
+        .schedule-table th, .schedule-table td {
+            border: 1px solid #fff;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+        }
+        .schedule-table th {
+            background-color: #f05454;
+        }
+        .donation-section .btn-donate {
+            background-color: #f05454;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .donation-section .btn-donate:hover {
+            background-color: #222831;
+        }
+        .social-icons a {
+            display: block;
+            background-color: #f05454;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 10px;
+            transition: background-color 0.3s;
+            font-size: 1.5em;
+        }
+        .social-icons a img {
+            width: 30px;
+            height: 30px;
+        }
+        .social-icons a:hover {
+            background-color: #222831;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="https://raw.githubusercontent.com/Trancsendfn/Team-Transcend/refs/heads/main/5FD0C504-198C-4F84-A69D-D367F8443069.png" alt="TRS Banner">
+</header>
+<nav>
+    <a href="#coaches">Coaching</a>
+    <a href="#community">Community</a>
+    <a href="#schedule">Event Schedule</a>
+    <a href="#team">Meet the Team</a>
+    <a href="#news">News</a>
+    <a href="#merch">Merchandise</a>
+    <a href="#faq">FAQ</a>
+</nav>
+<div class="container">
+    <section id="community">
+        <h2>Community Engagement</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Competitive Players</h3>
+                <p>Our community is filled with members who all have 150+ PR. Play with and against top players to sharpen your skills.</p>
+            </div>
+            <div class="card">
+                <h3>Push Yourself</h3>
+                <p>Surround yourself with driven players who will push you to improve and be the best you can be.</p>
+            </div>
+        </div>
+    </section>
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Event</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Solo Victory Cup</td>
+                    <td>Competitive Solo Battle Royale Cup. Fight for the top spot.</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Performance Cup</td>
+                    <td>Showcase your skills and compete for performance points.</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Duo Cash Cup</td>
+                    <td>Team up with a partner for a competitive duo challenge.</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Finals of Duo Cash Cup</td>
+                    <td>Top duos compete for cash prizes.</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Reload Duo Cash Cup</td>
+                    <td>A fast-paced competition with unique rules.</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Ranked Cup</td>
+                    <td>Compete in a high-stakes ranked event.</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>Squad Victory Cup</td>
+                    <td>Join forces with your team in the Squad Victory Cup.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!-- Donation Section -->
+    <section class="donation-section">
+        <h2>Support Us</h2>
+        <a href="#" class="btn-donate">Donate</a>
+    </section>
+    <!-- Team Section -->
+    <section id="team">
+        <h2>Meet the Team</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>TRS Gronk</h3>
+                <p>20x Solo Victory Cup Finalist - 12x 2nd Place, 8x 6th Place in Duo Cash Cup.</p>
+            </div>
+            <div class="card">
+                <h3>TRS Aluskiman</h3>
+                <p>15x Solo Victory Cup Finalist - 10x 2nd Place, 15x 6th Place in Duo Cash Cup.</p>
+            </div>
+            <div class="card">
+                <h3>TRS Vadios</h3>
+                <p>10x Solo Victory Cup Finalist - 5x 2nd Place, 22x 6th Place in Duo Cash Cup.</p>
+            </div>
+        </div>
+    </section>
+    <section id="news">
+        <h2>Latest News</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>New Squad Tactics</h3>
+                <p>We've developed new strategies for our upcoming competitions. Stay tuned!</p>
+            </div>
+            <div class="card">
+                <h3>Training Sessions</h3>
+                <p>Join us for weekly training sessions every Wednesday at 6 PM EST.</p>
+            </div>
+        </div>
+    </section>
+    <section id="merch">
+        <h2>Merchandise</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>T-Shirts</h3>
+                <p>Grab our latest T-shirts to support the team!</p>
+            </div>
+            <div class="card">
+                <h3>Hoodies</h3>
+                <p>Stay warm with our stylish hoodies. Available now!</p>
+            </div>
+        </div>
+    </section>
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>How can I join the team?</h3>
+                <p>Contact us through the community link above!</p>
+            </div>
+            <div class="card">
+                <h3>What are the team requirements?</h3>
+                <p>You must have at least 150 PR to join the competitive squad.</p>
+            </div>
+        </div>
+    </section>
+</div>
+<footer>
+    <p>Connect with us on:</p>
+    <div class="social-icons">
+        <a href="https://discord.com/" target="_blank">Discord</a>
+        <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+    </div>
+    <p>&copy; 2024 Team Transcend. All rights reserved.</p>
+</footer>
+</body>
+</html>
