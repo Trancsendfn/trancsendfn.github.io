@@ -196,25 +196,41 @@
   </div>
 
   <script>
+    // Retrieve historical data from localStorage (if it exists)
+    let statsHistory = JSON.parse(localStorage.getItem('statsHistory')) || { pr: [], earnings: [] };
+
     document.getElementById('statsForm').addEventListener('submit', function(e) {
       e.preventDefault(); // Prevent form submission
-      
-      // Get user input values
-      const pr = document.getElementById('userPR').value;
-      const earnings = document.getElementById('earnings').value;
 
-      // Create the chart
+      // Get user input values
+      const pr = parseInt(document.getElementById('userPR').value);
+      const earnings = parseInt(document.getElementById('earnings').value);
+
+      // Add new data to history
+      statsHistory.pr.push(pr);
+      statsHistory.earnings.push(earnings);
+
+      // Save updated history to localStorage
+      localStorage.setItem('statsHistory', JSON.stringify(statsHistory));
+
+      // Create the chart with historical data
       const ctx = document.getElementById('statsChart').getContext('2d');
       const statsChart = new Chart(ctx, {
-        type: 'bar', // Bar chart for visualization
+        type: 'line', // Change to 'line' for a continuous history chart
         data: {
-          labels: ['PR', 'Earnings'],
+          labels: Array.from({ length: statsHistory.pr.length }, (_, i) => `Stat ${i + 1}`), // Label each stat submission
           datasets: [{
-            label: 'User Stats',
-            data: [pr, earnings],
-            backgroundColor: ['#ff9a9e', '#fad0c4'],
-            borderColor: ['#ff9a9e', '#fad0c4'],
-            borderWidth: 1
+            label: 'PR History',
+            data: statsHistory.pr,
+            fill: false,
+            borderColor: '#ff9a9e',
+            tension: 0.1
+          }, {
+            label: 'Earnings History',
+            data: statsHistory.earnings,
+            fill: false,
+            borderColor: '#fad0c4',
+            tension: 0.1
           }]
         },
         options: {
@@ -230,3 +246,4 @@
   </script>
 </body>
 </html>
+
