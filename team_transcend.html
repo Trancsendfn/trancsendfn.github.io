@@ -169,6 +169,13 @@
             </div>
         </div>
     </section>
+
+    <!-- New Section for Graph -->
+    <section id="pr-earnings-graph">
+        <h2>PR and Earnings Graph</h2>
+        <canvas id="prEarningsGraph"></canvas>
+    </section>
+
     <section id="schedule">
         <h2>Event Schedule</h2>
         <table class="schedule-table">
@@ -245,12 +252,12 @@
         <h2>Latest News</h2>
         <div class="grid">
             <div class="card">
-                <h3>New Squad Tactics</h3>
-                <p>We've developed new strategies for our upcoming competitions. Stay tuned!</p>
+                <h3>New Event Announcement</h3>
+                <p>We have exciting new events coming up. Stay tuned for more details!</p>
             </div>
             <div class="card">
-                <h3>Training Sessions</h3>
-                <p>Join us for weekly training sessions every Wednesday at 6 PM EST.</p>
+                <h3>Player Earnings Boost</h3>
+                <p>We are introducing new ways to earn. Keep an eye on your progress!</p>
             </div>
         </div>
     </section>
@@ -258,36 +265,67 @@
         <h2>Merchandise</h2>
         <div class="grid">
             <div class="card">
-                <h3>T-Shirts</h3>
-                <p>Grab our latest T-shirts to support the team!</p>
+                <h3>Team Jerseys</h3>
+                <p>Get your hands on the latest team jerseys to show your support.</p>
             </div>
             <div class="card">
-                <h3>Hoodies</h3>
-                <p>Stay warm with our stylish hoodies. Available now!</p>
+                <h3>Limited Edition Hats</h3>
+                <p>Pick up a limited edition hat to complete your gaming attire.</p>
             </div>
         </div>
     </section>
     <section id="faq">
-        <h2>Frequently Asked Questions</h2>
+        <h2>FAQ</h2>
         <div class="grid">
             <div class="card">
                 <h3>How can I join the team?</h3>
-                <p>Contact us through the community link above!</p>
+                <p>Check out our recruitment page to apply and show your skills!</p>
             </div>
             <div class="card">
-                <h3>What are the team requirements?</h3>
-                <p>You must have at least 150 PR to join the competitive squad.</p>
+                <h3>Do you offer coaching?</h3>
+                <p>Yes, we offer coaching sessions to help you improve your gameplay.</p>
             </div>
         </div>
     </section>
 </div>
 <footer>
-    <p>Connect with us on:</p>
+    <p>&copy; 2024 Team Transcend. All Rights Reserved.</p>
     <div class="social-icons">
-        <a href="https://discord.com/" target="_blank">Discord</a>
-        <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+        <a href="#">Discord</a>
     </div>
-    <p>&copy; 2024 Team Transcend. All rights reserved.</p>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('prEarningsGraph').getContext('2d');
+    var prEarningsGraph = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November'],
+            datasets: [{
+                label: 'PR Earnings',
+                data: [350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850], // Sample data
+                borderColor: 'rgb(255, 99, 132)',
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                fill: true,
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Player PR and Earnings Over Time'
+                },
+                legend: {
+                    position: 'top',
+                },
+            },
+        }
+    });
+</script>
 </body>
 </html>
+
+
