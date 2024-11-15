@@ -81,24 +81,11 @@
             color: #fff;
         }
         footer a {
-            color: #e0e0e0; /* Changed to a dark color */
+            color: #e0e0e0; 
             text-decoration: none;
         }
         footer a:hover {
             text-decoration: underline;
-        }
-        .btn {
-            background-color: #000000;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            display: inline-block;
-            margin-top: 15px;
-        }
-        .btn:hover {
-            background-color: #222831;
         }
         .schedule-table {
             width: 100%;
@@ -113,32 +100,6 @@
         }
         .schedule-table th {
             background-color: #f05454;
-        }
-        .donation-section .btn-donate {
-            background-color: #f05454;
-            color: #fff;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        .donation-section .btn-donate:hover {
-            background-color: #222831;
-        }
-        .social-icons a {
-            display: block;
-            background-color: #f05454;
-            border-radius: 5px;
-            margin: 5px;
-            padding: 10px;
-            transition: background-color 0.3s;
-            font-size: 1.5em;
-        }
-        .social-icons a img {
-            width: 30px;
-            height: 30px;
-        }
-        .social-icons a:hover {
-            background-color: #222831;
         }
     </style>
 </head>
@@ -170,12 +131,6 @@
         </div>
     </section>
 
-    <!-- New Section for Graph -->
-    <section id="pr-earnings-graph">
-        <h2>PR and Earnings Graph</h2>
-        <canvas id="prEarningsGraph"></canvas>
-    </section>
-
     <section id="schedule">
         <h2>Event Schedule</h2>
         <table class="schedule-table">
@@ -192,94 +147,33 @@
                     <td>Solo Victory Cup</td>
                     <td>Competitive Solo Battle Royale Cup. Fight for the top spot.</td>
                 </tr>
-                <tr>
-                    <td>Tuesday</td>
-                    <td>Performance Cup</td>
-                    <td>Showcase your skills and compete for performance points.</td>
-                </tr>
-                <tr>
-                    <td>Wednesday</td>
-                    <td>Duo Cash Cup</td>
-                    <td>Team up with a partner for a competitive duo challenge.</td>
-                </tr>
-                <tr>
-                    <td>Thursday</td>
-                    <td>Finals of Duo Cash Cup</td>
-                    <td>Top duos compete for cash prizes.</td>
-                </tr>
-                <tr>
-                    <td>Friday</td>
-                    <td>Reload Duo Cash Cup</td>
-                    <td>A fast-paced competition with unique rules.</td>
-                </tr>
-                <tr>
-                    <td>Saturday</td>
-                    <td>Ranked Cup</td>
-                    <td>Compete in a high-stakes ranked event.</td>
-                </tr>
-                <tr>
-                    <td>Sunday</td>
-                    <td>Squad Victory Cup</td>
-                    <td>Join forces with your team in the Squad Victory Cup.</td>
-                </tr>
+                <!-- Add more schedule rows as needed -->
             </tbody>
         </table>
     </section>
-    <!-- Donation Section -->
-    <section class="donation-section">
-        <h2>Support Us</h2>
-        <a href="#" class="btn-donate">Donate</a>
-    </section>
-    <!-- Team Section -->
+
     <section id="team">
         <h2>Meet the Team</h2>
         <div class="grid">
             <div class="card">
-                <h3>Player 1</h3>
-                <p>Achievement 1</p>
+                <h3>TRS Aluskiman</h3>
+                <p>PR: 4690 | Earnings: $100</p>
             </div>
             <div class="card">
-                <h3>Player 2</h3>
-                <p>Achievement 2</p>
+                <h3>TRS Vadios</h3>
+                <p>PR: 4500 | Earnings: $90</p>
+            </div>
+            <div class="card">
+                <h3>TRS Gronk</h3>
+                <p>PR: 4600 | Earnings: $80</p>
             </div>
         </div>
     </section>
-    <!-- News Section -->
-    <section id="news">
-        <h2>Latest News</h2>
-        <p>Stay updated on upcoming tournaments, announcements, and team news.</p>
-    </section>
 </div>
 <footer>
-    <div class="social-icons">
-        <a href="https://twitter.com/teamtranscend" target="_blank">
-            <img src="twitter-icon.png" alt="Twitter">
-        </a>
-        <a href="https://instagram.com/teamtranscend" target="_blank">
-            <img src="instagram-icon.png" alt="Instagram">
-        </a>
-        <a href="https://discord.gg/teamtranscend" target="_blank">
-            <img src="discord-icon.png" alt="Discord">
-        </a>
-    </div>
-    <p>© 2024 Team Transcend</p>
+    <p>Join the team today! <a href="#">Contact Us</a></p>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-    var ctx = document.getElementById('prEarningsGraph').getContext('2d');
-    var prEarningsChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-            datasets: [{
-                label: 'Player Earnings',
-                data: [1000, 1200, 1400, 1600, 1800, 2000],
-                borderColor: 'rgba(75, 192, 192, 1)',
-                fill: false
-            }]
-        }
-    });
-</script>
 </body>
 </html>
+
 
