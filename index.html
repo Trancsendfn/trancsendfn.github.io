@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Form</title>
+  <title>User Stats Login</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for graph -->
   <style>
     /* General Reset */
     * {
@@ -151,32 +152,81 @@
       color: #ffdde1;
       text-decoration: none;
     }
+
+    /* Style for the graph */
+    #userStatsGraph {
+      margin-top: 40px;
+      max-width: 100%;
+      height: 300px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
   </style>
 </head>
 <body>
   <div class="wrapper">
-    <form action="team_transcend.html">
-      <h2>Login Form</h2>
+    <form id="statsForm">
+      <h2>User Stats</h2>
       <div class="input-field">
-        <input type="text" required>
-        <label>Enter your email</label>
+        <input type="number" id="userPR" required>
+        <label>Enter your PR</label>
       </div>
       <div class="input-field">
-        <input type="password" required>
-        <label>Enter your password</label>
+        <input type="number" id="earnings" required>
+        <label>Enter your Earnings</label>
       </div>
       <div class="forget">
         <label for="remember">
           <input type="checkbox" id="remember">
           <p>Remember me</p>
         </label>
-        <a href="#">Forgot password?</a>
+        <a href="#">Forgot stats?</a>
       </div>
-      <button type="submit">Log In</button>
+      <button type="submit">Submit</button>
       <div class="register">
-        <p>Don't have an account? <a href="#">Register</a></p>
+        <p>Don't have stats? <a href="#">Register</a></p>
       </div>
     </form>
+    <div id="userStatsGraph">
+      <!-- The graph will appear here after submission -->
+      <canvas id="statsChart"></canvas>
+    </div>
   </div>
+
+  <script>
+    document.getElementById('statsForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent form submission
+      
+      // Get user input values
+      const pr = document.getElementById('userPR').value;
+      const earnings = document.getElementById('earnings').value;
+
+      // Create the chart
+      const ctx = document.getElementById('statsChart').getContext('2d');
+      const statsChart = new Chart(ctx, {
+        type: 'bar', // Bar chart for visualization
+        data: {
+          labels: ['PR', 'Earnings'],
+          datasets: [{
+            label: 'User Stats',
+            data: [pr, earnings],
+            backgroundColor: ['#ff9a9e', '#fad0c4'],
+            borderColor: ['#ff9a9e', '#fad0c4'],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
