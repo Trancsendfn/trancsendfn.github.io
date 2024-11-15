@@ -170,11 +170,11 @@
     <form id="statsForm">
       <h2>User Stats</h2>
       <div class="input-field">
-        <input type="number" id="userPR" required>
+        <input type="number" id="userPR" required min="0">
         <label>Enter your PR</label>
       </div>
       <div class="input-field">
-        <input type="number" id="earnings" required>
+        <input type="number" id="earnings" required min="0">
         <label>Enter your Earnings</label>
       </div>
       <div class="forget">
@@ -218,7 +218,7 @@
       const statsChart = new Chart(ctx, {
         type: 'line', // Change to 'line' for a continuous history chart
         data: {
-          labels: Array.from({ length: statsHistory.pr.length }, (_, i) => `Stat ${i + 1}`), // Label each stat submission
+          labels: Array.from({ length: statsHistory.pr.length }, (_, i) => `Entry ${i + 1}`), // Label each stat submission
           datasets: [{
             label: 'PR History',
             data: statsHistory.pr,
@@ -245,5 +245,6 @@
     });
   </script>
 </body>
-</html>
+</html
+
 
