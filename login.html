@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Team Transcend</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('https://raw.githubusercontent.com/Trancsendfn/Team-Transcend/refs/heads/main/5FD0C504-198C-4F84-A69D-D367F8443069.png');
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .login-container input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #222831;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+        .login-container button {
+            background-color: #f05454;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .login-container button:hover {
+            background-color: #222831;
+        }
+        .stats {
+            margin-top: 20px;
+        }
+        .stats p {
+            margin: 5px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login to Team Transcend</h2>
+    <input type="text" id="username" placeholder="Enter your Username">
+    <input type="text" id="pr" placeholder="Enter your PR">
+    <input type="text" id="earnings" placeholder="Enter your Earnings">
+    <button onclick="submitForm()">Login</button>
+
+    <div class="stats">
+        <h3>Your Stats</h3>
+        <p>User: <span id="displayUsername"></span></p>
+        <p>PR: <span id="displayPR"></span></p>
+        <p>Earnings: <span id="displayEarnings"></span></p>
+    </div>
+</div>
+
+<script>
+    function submitForm() {
+        var username = document.getElementById('username').value;
+        var pr = document.getElementById('pr').value;
+        var earnings = document.getElementById('earnings').value;
+
+        if (username && pr && earnings) {
+            document.getElementById('displayUsername').innerText = username;
+            document.getElementById('displayPR').innerText = pr;
+            document.getElementById('displayEarnings').innerText = earnings;
+
+            // Here you can add code to store the data or redirect to the main page
+            alert('Login successful!');
+        } else {
+            alert('Please fill in all fields!');
+        }
+    }
+</script>
+
+</body>
+</html>
+
