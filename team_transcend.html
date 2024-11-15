@@ -234,4 +234,51 @@
     <section id="team">
         <h2>Meet the Team</h2>
         <div class="grid">
-            <div class
+            <div class="card">
+                <h3>Player 1</h3>
+                <p>Achievement 1</p>
+            </div>
+            <div class="card">
+                <h3>Player 2</h3>
+                <p>Achievement 2</p>
+            </div>
+        </div>
+    </section>
+    <!-- News Section -->
+    <section id="news">
+        <h2>Latest News</h2>
+        <p>Stay updated on upcoming tournaments, announcements, and team news.</p>
+    </section>
+</div>
+<footer>
+    <div class="social-icons">
+        <a href="https://twitter.com/teamtranscend" target="_blank">
+            <img src="twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://instagram.com/teamtranscend" target="_blank">
+            <img src="instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://discord.gg/teamtranscend" target="_blank">
+            <img src="discord-icon.png" alt="Discord">
+        </a>
+    </div>
+    <p>© 2024 Team Transcend</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('prEarningsGraph').getContext('2d');
+    var prEarningsChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{
+                label: 'Player Earnings',
+                data: [1000, 1200, 1400, 1600, 1800, 2000],
+                borderColor: 'rgba(75, 192, 192, 1)',
+                fill: false
+            }]
+        }
+    });
+</script>
+</body>
+</html>
