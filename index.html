@@ -3,194 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Stats Login</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for graph -->
+  <title>User Stats</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    /* General Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Open Sans", sans-serif;
-    }
-
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      width: 100%;
-      padding: 0 10px;
-      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: url("image.jpg"), #000;
-      background-position: center;
-      background-size: cover;
-      z-index: -1;
-    }
-
-    .wrapper {
-      width: 400px;
-      border-radius: 15px;
-      padding: 40px;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-      transition: all 0.35s ease;
-    }
-
-    .wrapper:hover {
-      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    h2 {
-      font-size: 2.2rem;
-      margin-bottom: 25px;
-      color: #ffffff;
-      letter-spacing: 1px;
-    }
-
-    .input-field {
-      position: relative;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-      margin: 20px 0;
-    }
-
-    .input-field label {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      color: #ffffff;
-      font-size: 16px;
-      pointer-events: none;
-      transition: 0.3s ease;
-    }
-
-    .input-field input {
-      width: 100%;
-      height: 40px;
-      background: transparent;
-      border: none;
-      outline: none;
-      font-size: 16px;
-      color: #ffffff;
-      padding: 0 10px;
-    }
-
-    .input-field input:focus ~ label,
-    .input-field input:valid ~ label {
-      font-size: 0.9rem;
-      top: 10px;
-      transform: translateY(-150%);
-      color: #ffdde1;
-    }
-
-    .forget {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 25px 0 35px 0;
-      color: #ffffff;
-    }
-
-    #remember {
-      accent-color: #ffdde1;
-    }
-
-    .forget label {
-      display: flex;
-      align-items: center;
-    }
-
-    .forget label p {
-      margin-left: 8px;
-    }
-
-    .wrapper a {
-      color: #ffdde1;
-      text-decoration: none;
-    }
-
-    button {
-      background: #ffdde1;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      color: #000;
-      transition: background 0.3s ease;
-    }
-
-    button:hover {
-      background: #ff9a9e;
-    }
-
-    .register p {
-      margin-top: 20px;
-      color: #ffffff;
-    }
-
-    .register a {
-      color: #ffdde1;
-      text-decoration: none;
-    }
-
-    /* Style for the graph */
-    #userStatsGraph {
-      margin-top: 40px;
-      max-width: 100%;
-      height: 300px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-
+    /* Include previous CSS styles here */
+    /* Adjust your existing styles accordingly */
   </style>
 </head>
 <body>
-  <div class="wrapper">
+  <div class="wrapper" id="statsFormWrapper">
     <form id="statsForm">
       <h2>User Stats</h2>
       <div class="input-field">
-        <input type="number" id="userPR" required min="0">
+        <input type="number" id="userPR" required>
         <label>Enter your PR</label>
       </div>
       <div class="input-field">
-        <input type="number" id="earnings" required min="0">
+        <input type="number" id="earnings" required>
         <label>Enter your Earnings</label>
       </div>
-      <div class="forget">
-        <label for="remember">
-          <input type="checkbox" id="remember">
-          <p>Remember me</p>
-        </label>
-        <a href="#">Forgot stats?</a>
-      </div>
       <button type="submit">Submit</button>
-      <div class="register">
-        <p>Don't have stats? <a href="#">Register</a></p>
-      </div>
     </form>
-    <div id="userStatsGraph">
-      <!-- The graph will appear here after submission -->
+    <div id="userStatsGraph" style="display: none;">
       <canvas id="statsChart"></canvas>
     </div>
   </div>
@@ -213,38 +47,15 @@
       // Save updated history to localStorage
       localStorage.setItem('statsHistory', JSON.stringify(statsHistory));
 
-      // Create the chart with historical data
-      const ctx = document.getElementById('statsChart').getContext('2d');
-      const statsChart = new Chart(ctx, {
-        type: 'line', // Change to 'line' for a continuous history chart
-        data: {
-          labels: Array.from({ length: statsHistory.pr.length }, (_, i) => `Entry ${i + 1}`), // Label each stat submission
-          datasets: [{
-            label: 'PR History',
-            data: statsHistory.pr,
-            fill: false,
-            borderColor: '#ff9a9e',
-            tension: 0.1
-          }, {
-            label: 'Earnings History',
-            data: statsHistory.earnings,
-            fill: false,
-            borderColor: '#fad0c4',
-            tension: 0.1
-          }]
-        },
-        options: {
-          responsive: true,
-          scales: {
-            y: {
-              beginAtZero: true
-            }
-          }
-        }
-      });
+      // Hide the form and show the graph
+      document.getElementById('statsFormWrapper').style.display = 'none';
+      document.getElementById('userStatsGraph').style.display = 'block';
+
+      // Redirect to main page after 3 seconds
+      setTimeout(function() {
+        window.location.href = 'team_transcend.html';  // Redirect to the main page
+      }, 3000); // Redirect after 3 seconds
     });
   </script>
 </body>
-</html
-
-
+</html>
